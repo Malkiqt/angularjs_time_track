@@ -1,0 +1,32 @@
+<div id="create_subtype_modal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+
+				 <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+				 <h4 class="modal-title">Create Subtype</h4>
+
+			</div>
+			<div class="modal-body">
+
+				<form ng-submit='create_subtype(create_subtype_type,create_subtype_name)'>
+
+					<select ng-model='create_subtype_type'>
+						<option ng-repeat='stat in main_stats'>{{stat}}</option>
+					</select>
+
+					<input class="modal_input col-xs-12" type="text" placeholder="Subtype Name" ng-model='create_subtype_name'><br> 
+
+					<input type="submit" value="Create Subtype">
+				</form>
+
+			</div>
+
+
+			
+			<div class="modal-footer">
+			</div>
+		 </div>
+	</div>
+</div>

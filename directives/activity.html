@@ -1,0 +1,21 @@
+<div class='activity'>
+	
+	<span class='data_start_time'>{{activity.name}} --></span>
+
+	<span class='data_start_time'>{{activity.start_time}}</span>
+
+	<span> - </span>
+
+	<span class='data_end_time'>{{activity.end_time}}</span>
+
+	<span class='data_description'>: {{activity.description}}</span>
+
+	<span class='data_type'>: {{activity.subtype}}</span>
+
+	<span class='data_type'>: {{activity.type}}</span>
+
+	<button class='update' data-toggle="modal" data-target="#update_activity_modal" ng-click='set_id(activity.id)'>Update</button>
+
+	<button class='delete' ng-click='delete_activity(activity.id)'>Delete</button>
+
+</div>

@@ -1,0 +1,46 @@
+<div id="update_activity_modal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+
+				 <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+				 <h4 class="modal-title">Update Activity</h4>
+
+			</div>
+			<div class="modal-body">
+
+				<form id='update_activity_form' ng-submit='update_acitivity(update_activity_name,update_activity_type,update_activity_subtype,update_activity_start_time,update_activity_end_time,update_activity_description)'>
+
+					<input ng-model='update_activity_name' type='text' placeholder='Name'>
+
+					<select name='type' ng-model='update_activity_type'>
+						<option selected disabled hidden>Type</option>
+						<option ng-repeat='stat in main_stats'>{{stat}}</option>
+					</select>
+
+					<select name='subtype'  ng-model='update_activity_subtype'>
+						<option selected disabled hidden>Subtype</option>
+						<option ng-repeat='substat in stats[update_activity_type].subtypes'>{{substat}}</option>
+					</select>
+
+					<br>
+					<input type='text' class='timepicker' placeholder='Start Time' name='start_time' ng-model='update_activity_start_time'>
+
+					<input type='text' class='timepicker' placeholder='End Time' name='end_time' ng-model='update_activity_end_time'>
+
+					<br>
+					<textarea placeholder='Description' ng-model='update_activity_description'></textarea>
+
+					<button type='submit'>Update Activity</button>
+				</form>
+
+			</div>
+
+
+			
+			<div class="modal-footer">
+			</div>
+		 </div>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+<div class='day'>
+	<div class='day_info'>
+		<span class='day_name' >{{day.name}}</span>
+		
+		<span> - </span>
+		
+		<span class='day_date'>{{day.date}}</span>
+	</div>
+	<button class='update' ng-click='set_id(day.id)' data-toggle="modal" data-target="#update_day_modal">Update</button>
+	<button class='select' ng-click='set_day(day.date);load_activities(day.date)'>Select</button>
+	
+</div>

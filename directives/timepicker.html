@@ -1,0 +1,36 @@
+<form name="timepickerForm" class="form-inline" role="form">
+
+  <!-- Basic example -->
+  <div class="form-group" ng-class="{'has-error': timepickerForm.time.$invalid}">
+    <label class="control-label"><i class="fa fa-clock-o"></i> Time <small>(as date)</small></label>
+    <input type="text" class="form-control" size="8" ng-model="time" name="time" bs-timepicker>
+  </div>
+
+  <!-- Custom example -->
+  <div class="form-group" ng-class="{'has-error': timepickerForm.time2.$invalid}">
+    <label class="control-label"><i class="fa fa-clock-o"></i> Time <small>(as number)</small></label>
+    <input type="text" class="form-control" size="8" ng-model="selectedTimeAsNumber" data-time-format="HH:mm:ss" data-time-type="number" data-min-time="10:00:00" data-max-time="13:30:00" data-autoclose="1" name="time2" bs-timepicker>
+  </div>
+  <hr>
+
+  <!-- Time picker with arrows example -->
+  <div class="form-group">
+    <label class="control-label"><i class="fa fa-clock-o"></i> Time picker with arrows</label><br>
+    <div class="form-group">
+    <input type="text" class="form-control" size="8" ng-model="time" name="time" bs-timepicker data-time-format="HH:mm" data-length="1" data-minute-step="1" data-arrow-behavior="picker">
+    </div>
+  </div>
+  <hr>
+
+  <!-- Datetime example -->
+  <div class="form-group">
+    <label class="control-label"><i class="fa fa-calendar"></i> Datetime picker</label><br>
+    <div class="form-group">
+      <input type="text" size="10" class="form-control" ng-model="sharedDate" data-autoclose="1" placeholder="Date" bs-datepicker>
+    </div>
+    <div class="form-group">
+      <input type="text" size="8" class="form-control" ng-model="sharedDate" data-time-format="h:mm:ss a" data-autoclose="1" placeholder="Time" bs-timepicker>
+    </div>
+  </div>
+
+</form>

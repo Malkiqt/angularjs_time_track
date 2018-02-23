@@ -1,0 +1,46 @@
+<div id="create_activity_modal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+
+				 <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+				 <h4 class="modal-title">Create Activity</h4>
+
+			</div>
+			<div class="modal-body">
+
+				<form id='create_activity_form' ng-submit='create_activity(create_activity_name,create_activity_type,create_activity_subtype,create_activity_start_time,create_activity_end_time,create_activity_description)'>
+
+					<input ng-model='create_activity_name' type='text' placeholder='Name'>
+
+					<select name='type' ng-model='create_activity_type'>
+						<option selected disabled hidden>Type</option>
+						<option ng-repeat='stat in main_stats'>{{stat}}</option>
+					</select>
+
+					<select name='subtype'  ng-model='create_activity_subtype'>
+						<option selected disabled hidden>Subtype</option>
+						<option ng-repeat='(substat_key,substat_value) in stats[create_activity_type].subtypes'>{{substat_key}}</option>
+					</select>
+
+					<br>
+					<input ng-timepicker type='text' class='timepicker' placeholder='Start Time' name='start_time' ng-model='create_activity_start_time'>
+
+					<input type='text' class='timepicker' placeholder='End Time' name='end_time' ng-model='create_activity_end_time'>
+
+					<br>
+					<textarea placeholder='Description' ng-model='create_activity_description'></textarea>
+
+					<button type='submit'>Create Activity</button>
+				</form>
+
+			</div>
+
+
+			
+			<div class="modal-footer">
+			</div>
+		 </div>
+	</div>
+</div>
